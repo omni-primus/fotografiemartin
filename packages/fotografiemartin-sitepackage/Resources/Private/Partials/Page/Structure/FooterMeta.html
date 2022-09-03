@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{theme.meta.enable} || {theme.language.enable} || {theme.copyright.enable} || {theme.socialmedia.enable}">
+    <section class="section footer-section footer-section-meta">
+        <div class="frame frame-background-none frame-space-before-none frame-space-after-none">
+            <div class="frame-group-container">
+                <div class="frame-group-inner">
+                    <div class="frame-container">
+                        <div class="frame-inner">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-left footer-logo-social col-lg-4 col-md-4 col-sm-12">
+                                        <a href="/">
+                                            <f:image class="footer-logo-normal" image="{logo.normal}" />
+                                            <f:if condition="{theme.socialmedia.enable}">
+                                                <div class="footer-sociallinks">
+                                                    <f:render partial="Structure/SocialLinks" arguments="{_all}" />
+                                                </div>
+                                            </f:if>
+                                        </a>
+                                    </div>
+                                    <div class="footer-middle col-lg-4 col-md-4 col-sm-12">
+
+                                    </div>
+                                    <div class="footer-right footer-legal col-lg-4 col-md-4 col-sm-12">
+                                        <div class="footer-nav-legal">
+                                            XXX/XXX/XXX
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</f:if>
+</html>
