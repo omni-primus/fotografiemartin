@@ -1,0 +1,13 @@
+## Footer-Navigation
+lib.dynamicContent = COA
+lib.dynamicContent {
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 {
+            special = directory
+            special.value = 91
+            as = menu
+        }
+    }
+
+}

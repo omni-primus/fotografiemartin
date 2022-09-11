@@ -2,6 +2,9 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fotografiemartin-sitepackage/Configuration/TypoScript/Libary/leftnavigation.typoscript">
+
+#<INCLUDE_TYPOSCRIPT: source="DIR:EXT:fotografiemartinsitepackage/Configuration/TypoScript/Libary" extensions="typoscript">
 
 
 ##############
@@ -28,3 +31,5 @@ page {
         fotografiemartin_sitepackage_scripts = EXT:fotografiemartin_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
     }
 }
+
+config.contentObjectExceptionHandler = 0

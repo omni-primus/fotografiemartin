@@ -1,0 +1,14 @@
+@include media-breakpoint-up('xs') {
+  .header-desktop {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up('lg') {
+  .header-mobile {
+    display: none;
+  }
+  .header-desktop {
+    display: block;
+  }
+}

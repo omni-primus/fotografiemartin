@@ -9,12 +9,11 @@
 ############
 page {
     logo {
-        file = EXT:fotografiemartin_sitepackage/Resources/Public/Images/logo.svg
-        fileInverted = EXT:fotografiemartin_sitepackage/Resources/Public/Images/logo-inverted.svg
+        file = EXT:fotografiemartin_sitepackage/Resources/Public/Images/Martin4K.png
         height = 52
         width = 192
-        alt = fotografiemartin-sitepackage
-        linktitle = fotografiemartin-sitepackage
+        alt = fotografiemartin
+        linktitle = fotografiemartin
     }
     favicon {
         file = EXT:fotografiemartin_sitepackage/Resources/Public/Icons/favicon.ico
