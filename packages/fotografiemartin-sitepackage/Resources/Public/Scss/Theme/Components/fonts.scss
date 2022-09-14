@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "primusicons";
+  src: url("/typo3conf/ext/fotografiemartin_sitepackage/Resources/Public/Fonts/primus-icons/primus-icons.eot") format("embedded-opentype"),
+  url("/typo3conf/ext/fotografiemartin_sitepackage/Resources/Public/Fonts/primus-icons/primus-icons.svg") format("svg"),
+  url("/typo3conf/ext/fotografiemartin_sitepackage/Resources/Public/Fonts/primus-icons/primus-icons.woff") format("woff"),
+  url("/typo3conf/ext/fotografiemartin_sitepackage/Resources/Public/Fonts/primus-icons/primus-icons.ttf") format("truetype");
+}
+
+.primusicon::before {
+  font-family: "primusicons" !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-rendering: auto;
+  text-transform: none;
+  line-height: 1;
+}
+
+.primusicon-newspaper::before { content: "\e904"; }
+.primusicon-droplet::before { content: "\e90b"; }
+.primusicon-image::before { content: "\e90d"; }
+.primusicon-images::before { content: "\e90e"; }
+.primusicon-camera:before { content: "\e90f"; }
+.primusicon-whatsapp::before { content: "\ea93"; }
+.primusicon-book::before { content: "\e91f"; }
+.primusicon-file-text::before { content: "\e926"; }
+.primusicon-file-picture::before { content: "\e927"; }
+.primusicon-file-video::before { content: "\e92a"; }
+.primusicon-folder-open::before { content: "\e930"; }
+.primusicon-folder-download::before { content: "\e933"; }
+.primusicon-folder-upload::before { content: "\e934"; }
+.primusicon-cart::before { content: "\e93a"; }
+.primusicon-printer::before { content: "\e954"; }
+.primusicon-bubbles::before { content: "\e96c"; }
+.primusicon-user::before { content: "\e971"; }
+.primusicon-search::before { content: "\e986"; }
+.primusicon-lock::before { content: "\e98f"; }
+.primusicon-unlocked::before { content: "\e990"; }
+.primusicon-wrench::before { content: "\e991"; }
+.primusicon-equalizer::before { content: "\e992"; }
+.primusicon-equalizer2::before { content: "\e993"; }
+.primusicon-cogs::before { content: "\e995"; }
+.primusicon-stats-dots::before { content: "\e99b"; }
+.primusicon-tree::before { content: "\e9bc"; }
+.primusicon-link::before { content: "\e9cb"; }

@@ -10,8 +10,8 @@
 page {
     logo {
         file = EXT:fotografiemartin_sitepackage/Resources/Public/Images/Martin4K.png
-        height = 52
-        width = 192
+        height = auto
+        width = 130
         alt = fotografiemartin
         linktitle = fotografiemartin
     }

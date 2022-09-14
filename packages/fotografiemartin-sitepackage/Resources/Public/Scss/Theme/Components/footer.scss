@@ -10,3 +10,26 @@
 .footer-sociallinks {
   display: flex;
 }
+
+.footer-section-meta {
+  background: $primus-primary;
+  color: $primus-light;
+
+  .footer-sociallinks .sociallinks-link {
+    color: $primus-light;
+
+    &.sociallinks-link-instagram:hover {
+      color: #C13584;
+    }
+    &.sociallinks-link-facebook:hover {
+      color: #4267B2;
+    }
+    &.sociallinks-link-whatsapp:hover {
+      color: #25D366;
+    }
+  }
+}
+
+.footer-nav-legal {
+  color: $primus-light;
+}

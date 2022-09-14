@@ -1,6 +1,18 @@
 @include media-breakpoint-up('xs') {
-  .header-desktop {
-    display: none;
+  #page-header {
+    background: transparent;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    z-index: 5;
+    .header-desktop {
+      display: none;
+    }
+    .nav-link {
+      color: $primus-light;
+      text-transform: uppercase;
+
+    }
   }
 }
 
@@ -8,7 +20,29 @@
   .header-mobile {
     display: none;
   }
-  .header-desktop {
-    display: block;
+
+  #page-header{
+    justify-content: center;
+    .header-desktop {
+      display: block;
+      .nav-link {
+        font: normal normal bold 15px/18px Calibre;
+        letter-spacing: .4em;
+      }
+
+      .header-middle-container {
+        margin-left: 70px;
+        margin-right: 70px;
+      }
+
+      .header-left-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .header-right-container {
+        display: flex;
+        flex-direction: row;
+      }
+    }
   }
 }

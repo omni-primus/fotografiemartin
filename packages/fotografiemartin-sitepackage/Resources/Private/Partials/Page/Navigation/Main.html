@@ -4,8 +4,8 @@
 <f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
 <f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type}}</f:variable>
 <header id="page-header" class="{headerClass}">
-    <div class="header-desktop">
-        <div class="container">
+    <div class="header-desktop navbar navbar-expand-lg">
+        <div class="container-fluid">
             <div class="header-left-container">
                 <f:render partial="Navigation/leftNavigation" arguments="{_all}" />
             </div>
@@ -13,9 +13,7 @@
                 <f:render section="BrandLogo" arguments="{logo: logo}"/>
             </div>
             <div class="header-right-container">
-                <f:for each="{menu}" as="item">
-
-                </f:for>
+                <f:render partial="Navigation/rightNavigation" arguments="{_all}" />
             </div>
         </div>
     </div>
@@ -87,10 +85,10 @@
 </f:section>
 
 <f:section name="BrandLogo">
-    <f:link.page pageUid="{rootPage}" class="navbar-brand navbar-brand-{f:if(condition: logo.normal, then: 'image', else: 'text')}" title="{settings.logo.linktitle}">
+    <f:link.page pageUid="{rootPage}" class="" title="{settings.logo.linktitle}">
         <f:if condition="{logo.normal}">
             <f:then>
-                <img class="brand-logo-normal" src="{f:uri.image(image: logo.normal)}" alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
+                <img class="primus-brand-logo" src="{f:uri.image(image: logo.normal)}" alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
             </f:then>
         </f:if>
     </f:link.page>
