@@ -2,7 +2,15 @@
 
 <f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation navbar-{theme.navigation.style}</f:variable>
 <f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
-<f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type}}</f:variable>
+<f:if condition="theme.navigation.type">
+    <f:then>
+        <f:variable name="inline">navbar-{theme.navigation.type}</f:variable>
+    </f:then>
+    <f:else>
+        <f:variable name="inline">navbar-top</f:variable>
+    </f:else>
+</f:if>
+<f:variable name="headerClass">{headerClass} {inline}</f:variable>
 <header id="page-header" class="{headerClass}">
     <div class="header-desktop navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -21,14 +29,11 @@
         <div class="container">
             <f:render section="BrandLogo"/>
             <f:if condition="{mainnavigation}">
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#mainnavigation" data-bs-target="#mainnavigation" aria-controls="mainnavigation" aria-expanded="false" aria-label="{f:translate(key: 'togglenavigation', extensionName: 'bootstrap_package')}">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="offcanvas" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <nav id="mainnavigation" class="collapse navbar-collapse">
-                    <f:render partial="DropIn/Navigation/MainBefore" arguments="{_all}" />
-                    <f:render section="MainNavigation" arguments="{menu: mainnavigation, theme: theme}" />
-                    <f:render partial="DropIn/Navigation/MainAfter" arguments="{_all}" />
-                </nav>
+                <f:render section="BrandLogo" arguments="{_all}"></f:render>
+                <f:render section="offcanvas" arguments="{_all}" />
             </f:if>
         </div>
     </div>
@@ -85,12 +90,34 @@
 </f:section>
 
 <f:section name="BrandLogo">
-    <f:link.page pageUid="{rootPage}" class="" title="{settings.logo.linktitle}">
+    <a href="{rootPage}" class="lel" title="{settings.logo.linktitle}">
         <f:if condition="{logo.normal}">
             <f:then>
                 <img class="primus-brand-logo" src="{f:uri.image(image: logo.normal)}" alt="{logoAlt}" height="{settings.logo.height}" width="{settings.logo.width}">
             </f:then>
         </f:if>
-    </f:link.page>
+    </a>
+</f:section>
+
+<f:section name="offcanvas">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+            <f:render section="BrandLogo" arguments="{_all}"></f:render>
+            <button type="button" class="btn-close primusicon primusicon-cross" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-upper-elements">
+                <f:render partial="Navigation/leftNavigation" arguments="{_all}" />
+                <f:render partial="Navigation/rightNavigation" arguments="{_all}" />
+            </div>
+            <div class="offcanvas-lower-elements">
+                <f:link.page class="offcanvas-legal-link" pageUid="89">Kontakt</f:link.page>
+                <span class="offcanvas-legal-seperator">/</span>
+                <f:link.page class="offcanvas-legal-link" pageUid="86">Impressum</f:link.page>
+                <span class="offcanvas-legal-seperator">/</span>
+                <f:link.page class="offcanvas-legal-link" pageUid="88">Datenschutz</f:link.page>
+            </div>
+        </div>
+    </div>
 </f:section>
 </html>

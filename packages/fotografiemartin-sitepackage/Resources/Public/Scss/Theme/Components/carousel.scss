@@ -1,15 +1,26 @@
-.carousel-indicators {
-  display: none;
+@include media-breakpoint-up('xs') {
+  .navbar+a+.carousel-fullscreen, .navbar+a+.carousel-fullscreen .carousel-item, .navbar+a+a+.carousel-fullscreen, .navbar+a+a+.carousel-fullscreen .carousel-item, .navbar+.main-section>a+.carousel-fullscreen, .navbar+.main-section>a+.carousel-fullscreen .carousel-item, .navbar+.main-section>a+a+.carousel-fullscreen, .navbar+.main-section>a+a+.carousel-fullscreen .carousel-item {
+    height: 500px;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .carousel-header {
+    display: none;
+  }
+
+  .carousel .carousel-control-icon {
+    background-color: unset;
+    &:before {
+      border: unset;
+    }
+  }
 }
 
-.carousel-header {
-  display: none;
-}
-
-.carousel .carousel-control-icon {
-  background-color: unset;
-}
-
-.navbar+a+.carousel-fullscreen, .navbar+a+.carousel-fullscreen .carousel-item, .navbar+a+a+.carousel-fullscreen, .navbar+a+a+.carousel-fullscreen .carousel-item, .navbar+.main-section>a+.carousel-fullscreen, .navbar+.main-section>a+.carousel-fullscreen .carousel-item, .navbar+.main-section>a+a+.carousel-fullscreen, .navbar+.main-section>a+a+.carousel-fullscreen .carousel-item {
-  height: 100vh;
+@include media-breakpoint-up('lg') {
+  .navbar+a+.carousel-fullscreen, .navbar+a+.carousel-fullscreen .carousel-item, .navbar+a+a+.carousel-fullscreen, .navbar+a+a+.carousel-fullscreen .carousel-item, .navbar+.main-section>a+.carousel-fullscreen, .navbar+.main-section>a+.carousel-fullscreen .carousel-item, .navbar+.main-section>a+a+.carousel-fullscreen, .navbar+.main-section>a+a+.carousel-fullscreen .carousel-item {
+    height: 100vh;
+  }
 }

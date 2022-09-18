@@ -7,23 +7,20 @@
                     <div class="frame-container">
                         <div class="frame-inner">
                             <div class="container">
-                                <div class="row">
-                                    <div class="footer-left footer-logo-social col-lg-4 col-md-4 col-sm-12">
-                                        <a href="/">
+                                <div class="row footer-row">
+                                    <div class="footer-left footer-logo-social col-lg-4 col-md-6 col-sm-12">
+                                        <a class="footer-image-link" href="/">
                                             <f:image class="footer-logo-normal" image="{logo.normal}" />
-                                            <f:if condition="{theme.socialmedia.enable}">
-                                                <div class="footer-sociallinks">
-                                                    <f:render partial="Structure/SocialLinks" arguments="{_all}" />
-                                                </div>
-                                            </f:if>
                                         </a>
+                                        <f:if condition="{theme.socialmedia.enable}">
+                                            <div class="footer-sociallinks">
+                                                <f:render partial="Structure/SocialLinks" arguments="{_all}" />
+                                            </div>
+                                        </f:if>
                                     </div>
-                                    <div class="footer-middle col-lg-4 col-md-4 col-sm-12">
-
-                                    </div>
-                                    <div class="footer-right footer-legal col-lg-4 col-md-4 col-sm-12">
+                                    <div class="footer-right footer-legal col-lg-4 col-md-6 col-sm-12">
                                         <div class="footer-nav-legal">
-                                            XXX/XXX/XXX
+                                            <f:link.page class="footer-legal-link" pageUid="89">Kontakt</f:link.page> / <f:link.page class="footer-legal-link" pageUid="86">Impressum</f:link.page> / <f:link.page class="footer-legal-link" pageUid="88">Datenschutz</f:link.page>
                                         </div>
                                     </div>
                                 </div>

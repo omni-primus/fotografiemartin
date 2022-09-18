@@ -1,17 +1,66 @@
 @include media-breakpoint-up('xs') {
   #page-header {
-    background: transparent;
-    position: absolute;
+    background: transparent !important;
+    position: fixed;
     top: 25px;
     width: 100%;
     z-index: 5;
     .header-desktop {
       display: none;
     }
-    .nav-link {
-      color: $primus-light;
-      text-transform: uppercase;
+    &.navbar-mainnavigation {
+      box-shadow: none;
+    }
+    .header-mobile {
+      .navbar-toggler {
+        color: $primus-light;
+      }
 
+      .offcanvas {
+        background-color: $primus-primary;
+      }
+
+      .nav-link {
+        color: $primus-light;
+        border-bottom: 1px solid rgba($primus-light, .2);
+        padding-top: 27px;
+        padding-bottom: 20px;
+        font: normal normal normal 18px/21px Calibre;
+        letter-spacing: .4em;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .offcanvas-header{
+        align-items: flex-start;
+        .btn-close {
+          color: $primus-light;
+          background: none;
+        }
+      }
+      .offcanvas-body {
+        display: flex;
+        flex-direction: column;
+        .offcanvas-upper-elements {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+        }
+        .offcanvas-lower-elements {
+          display: flex;
+          justify-content: center;
+          font: normal normal normal 18px/21px Calibre;
+          letter-spacing: .1em;
+          .offcanvas-legal-link {
+            color: $primus-light;
+          }
+          .offcanvas-legal-seperator {
+            padding-left: 5px;
+            padding-right: 5px;
+            color: $primus-light;
+          }
+        }
+      }
     }
   }
 }
@@ -23,11 +72,17 @@
 
   #page-header{
     justify-content: center;
+    position: absolute;
+
+    &.navbar-mainnavigation {
+      box-shadow: 0 1px 0 0 rgb(0 0 0 / 15%);
+    }
     .header-desktop {
       display: block;
       .nav-link {
         font: normal normal bold 15px/18px Calibre;
         letter-spacing: .4em;
+        color: $primus-light;
       }
 
       .header-middle-container {
