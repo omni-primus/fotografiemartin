@@ -14,28 +14,29 @@
 <header id="page-header" class="{headerClass}">
     <div class="header-desktop navbar navbar-expand-lg">
         <div class="container-fluid">
-            <div class="header-left-container">
+            <div class="header-left-container navbar-collapse">
                 <f:render partial="Navigation/leftNavigation" arguments="{_all}" />
             </div>
             <div class="header-middle-container">
                 <f:render section="BrandLogo" arguments="{logo: logo}"/>
             </div>
-            <div class="header-right-container">
+            <div class="header-right-container navbar-collapse">
                 <f:render partial="Navigation/rightNavigation" arguments="{_all}" />
             </div>
         </div>
     </div>
     <div class="header-mobile">
-        <div class="container">
-            <f:render section="BrandLogo"/>
-            <f:if condition="{mainnavigation}">
+
+        <f:if condition="{mainnavigation}">
+            <div class="container">
                 <button class="navbar-toggler collapsed" type="button" data-toggle="offcanvas" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <f:render section="BrandLogo" arguments="{_all}"></f:render>
                 <f:render section="offcanvas" arguments="{_all}" />
-            </f:if>
-        </div>
+                <f:render section="BrandLogo" arguments="{_all}"></f:render>
+                <a href></a>
+            </div>
+        </f:if>
     </div>
 </header>
 

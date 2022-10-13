@@ -12,8 +12,14 @@
       box-shadow: none;
     }
     .header-mobile {
+      width: 100%;
       .navbar-toggler {
         color: $primus-light;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
 
       .offcanvas {
@@ -70,15 +76,19 @@
     display: none;
   }
 
-  #page-header{
+  #page-header {
     justify-content: center;
     position: absolute;
 
     &.navbar-mainnavigation {
-      box-shadow: 0 1px 0 0 rgb(0 0 0 / 15%);
+      //box-shadow: 0 1px 0 0 rgb(0 0 0 / 15%);
     }
     .header-desktop {
       display: block;
+      width: 100%;
+      .container-fluid {
+        flex-wrap: nowrap;
+      }
       .nav-link {
         font: normal normal bold 15px/18px Calibre;
         letter-spacing: .4em;
@@ -86,8 +96,16 @@
       }
 
       .header-middle-container {
-        margin-left: 70px;
-        margin-right: 70px;
+        //margin-left: 70px;
+        //margin-right: 70px;
+        width: 20%;
+        text-align: center;
+      }
+
+      .header-left-container, .header-right-container {
+        width: 40%;
+        max-width: calc(100vh - 100px);
+        justify-content: center;
       }
 
       .header-left-container {
