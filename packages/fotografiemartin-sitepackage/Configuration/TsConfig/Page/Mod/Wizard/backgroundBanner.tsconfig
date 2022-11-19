@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+    plugins {
+        elements {
+            backgroundBanner {
+                iconIdentifier = content-text
+                title = Background Banner volle Breite
+                description = Ein Banner mit Text und einem Vollbild Hintergrundbanner.
+                tt_content_defValues {
+                    CType = backgroundBanner
+                }
+            }
+        }
+        show := addToList(backgroundBanner)
+    }
+}

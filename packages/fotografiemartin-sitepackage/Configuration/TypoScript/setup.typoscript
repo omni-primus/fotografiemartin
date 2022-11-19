@@ -4,6 +4,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fotografiemartin_sitepackage/Configuration/TypoScript/Libary/leftnavigation.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fotografiemartin_sitepackage/Configuration/TypoScript/Libary/rightnavigation.ts">
+@import 'EXT:fotografiemartin_sitepackage/Configuration/TypoScript/ContentElements/*.typoscript'
 
 
 ##############

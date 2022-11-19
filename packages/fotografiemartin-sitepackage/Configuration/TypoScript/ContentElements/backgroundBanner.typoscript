@@ -1,0 +1,10 @@
+lib.contentElement {
+    templateRootPaths.200 = EXT:fotografiemartin-sitepackage/Resources/Private/Templates/ContentElements/
+}
+
+tt_content.backgroundBanner >
+tt_content.backgroundBanner =< lib.contentElement
+tt_content.backgroundBanner {
+    //name of the template file
+    templateName = backgroundBanner
+}

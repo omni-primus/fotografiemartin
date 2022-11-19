@@ -9,3 +9,7 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['fotografiemartin_sitepackage'] = 
  * PageTS
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fotografiemartin_sitepackage/Configuration/TsConfig/Page/All.tsconfig">');
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+    '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fotografiemartin_sitepackage/Configuration/TsConfig/Page/Mod/Wizard/backgroundBanner.tsconfig">'
+);
