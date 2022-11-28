@@ -7,9 +7,10 @@
     <f:if condition="{data.background_image_options.fade}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} frame-backgroundimage-fade</f:variable></f:if>
     <f:if condition="{data.background_image_options.filter}"><f:variable name="backgroundImageClasses">{backgroundImageClasses} frame-backgroundimage-{data.background_image_options.filter}</f:variable></f:if>
     <div class="frame-backgroundimage-container">
-        <div id="{backgroundImageIdentifier}" class="{backgroundImageClasses}">
-
+        <f:variable name="bg-path" value="{backgroundImage.0.originalFile.identifier}"></f:variable>
+        <div id="{backgroundImageIdentifier}" class="{backgroundImageClasses}" style="background-image: url(/fileadmin{bg-path})">
         </div>
+
     </div>
 </f:if>
 </html>
