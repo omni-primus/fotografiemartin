@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+    // add the content element to the tab "common"
+    plugins {
+        elements {
+            galleryElement {
+                iconIdentifier = content-text
+                title = Gallery Element
+                description = Bildergallery mit fancy Design
+                tt_content_defValues {
+                    CType = galleryElement
+                }
+            }
+        }
+        show := addToList(galleryElement)
+    }
+}
