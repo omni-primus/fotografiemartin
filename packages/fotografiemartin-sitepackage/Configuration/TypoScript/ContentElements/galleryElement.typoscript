@@ -2,13 +2,12 @@ lib.contentElement {
     templateRootPaths.200 = EXT:fotografiemartin-sitepackage/Resources/Private/Templates/ContentElements/
 }
 
-tt_content.galleryElement >
 tt_content.galleryElement =< lib.contentElement
 tt_content.galleryElement {
     //name of the template file
     templateName = galleryElement
     dataProcessing {
-        10 = files
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
         10 {
             as = images
             references.fieldName = image
@@ -17,11 +16,11 @@ tt_content.galleryElement {
             sorting.direction = descending
         }
 
-        20 = gallery
+        20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
         20 {
             filesProcessedDataKey = images
             mediaOrientation.field = imageorient
-            numberOfColumns = 4
+            numberOfColumns.field = imagecols
             equalMediaHeight.field = imageheight
             equalMediaWidth.field = imagewidth
             maxGalleryWidth = 1000

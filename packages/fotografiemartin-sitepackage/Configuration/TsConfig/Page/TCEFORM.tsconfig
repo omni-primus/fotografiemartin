@@ -6,6 +6,8 @@ TCEFORM {
 
     }
     tt_content {
-
+        imageheight.disabled = 0
+        imagewidth.disabled = 0
+        imageborder.disabled = 0
     }
 }
