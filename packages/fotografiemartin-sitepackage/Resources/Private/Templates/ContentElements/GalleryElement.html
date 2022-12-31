@@ -1,19 +1,19 @@
 <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-<h2>Data in variable gallery</h2>
-<f:debug inline="true">{gallery}</f:debug>
-
-<h2>Output</h2>
-<f:for each="{gallery.rows}" as="row">
-    <div class="row">
-        <f:for each="{row.columns}" as="column">
-            <div class="col-3 p-{gallery.border.padding}">
-                <f:image image="{column.media}"
-                         class="{f:if(condition: '{gallery.border.enabled}',
-                           then:'border border-success rounded')}"
-                         style="border-width: {gallery.border.width}px!important;object-fit:contain;width:300px;height:300px;"/>
-            </div>
-        </f:for>
-    </div>
-</f:for>
-
+<f:layout name="Default" />
+<f:section name="Main">
+    <f:for each="{gallery.rows}" as="row">
+        <div class="row">
+            <f:variable name="colCount"><f:count>{row.columns}</f:count></f:variable>
+            <f:for each="{row.columns}" as="column">
+                <div class="col-{f:if(condition: '{colCount} == 2', then: '6')}{f:if(condition: '{colCount} == 3', then: '4')}{f:if(condition: '{colCount} == 4', then: '3')} gallery-image-row">
+                    <f:if condition="{column.media}">
+                        <f:image image="{column.media}"
+                                 class="{f:if(condition: '{gallery.border.enabled}', then:'border border-success rounded')} gallery-image">
+                        </f:image>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:for>
+</f:section>
 </html>

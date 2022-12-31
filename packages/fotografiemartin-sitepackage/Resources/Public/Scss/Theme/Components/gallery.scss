@@ -1,0 +1,24 @@
+@include media-breakpoint-up('xs') {
+  .gallery-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .gallery-image-row {
+    padding: 0.5rem;
+  }
+}
+@include media-breakpoint-up('sm') {
+
+}
+@include media-breakpoint-up('md') {
+  .gallery-image {
+    height: 245px;
+  }
+  .gallery-image-row {
+    padding: 1rem;
+  }
+}
+@include media-breakpoint-up('lg') {
+
+}
